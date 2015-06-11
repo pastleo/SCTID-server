@@ -1,0 +1,177 @@
+/* stripe */
+.masthead.stripe{
+    padding: 50px 0px;
+}
+.long.stripe{
+    height: 200px;
+}
+.short.stripe{
+    height: 70px;
+}
+.real.long.stripe{
+    height: 600px;
+}
+
+/* frame & filter */
+.frame.background{
+    position: absolute;
+    top:0;
+    bottom:0;
+    z-index: 1;
+    width: 100%;
+}
+.frame.filter{
+    position: fixed;
+    top:0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.7s;
+    background: rgba(0,0,0,0.1);
+}
+.frame.curtain{
+    position: relative;
+    z-index: 3;
+}
+/* stript and filter color */
+.index.stripe .header{
+    color: #FFD633 !important;
+    text-shadow: 0px 0px 1px #3399FF, 0px 0px 1px #3399FF, 0px 0px 1px #3399FF, 0px 0px 1px #3399FF, 0px 0px 1px #3399FF;
+}
+.index.stripe h1,.index.stripe h2,.index.stripe h3,.index.stripe h4,.index.stripe h5,.index.stripe i,.index{
+    color: #060050 !important;
+    
+}
+
+.game.stripe .header,.game.stripe h1,.game.stripe h2,.game.stripe h3,.game.stripe h4,.game.stripe h5,.game.stripe i{
+    color: #FF6699 !important;
+    text-shadow: 0px 0px 8px #FFFFCC;
+}
+.frame.filter.game{
+    background: rgba(86, 237, 255, 0.31);
+}
+
+.footer.stripe{
+    background: black;
+}
+.footer.stripe .header{
+    color: white;
+}
+
+/* header */
+@media (min-width: 1050px){
+    .ui.header.massive{
+        font-size: 5em;
+    }
+}
+
+/* misc */
+.centerized{
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.centerAligned{
+    text-align: center !important;
+}
+.ui.hidable.hidden{
+    display:none;
+}
+
+@media (min-width: 700px){
+    .viewport-height{
+        min-height: 100vh;
+    }
+}
+
+.bg{
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+/* segment */
+.ui.homebrew.inverted.segment{
+    background: black;
+    color: #46f69d !important;
+}
+
+/* rwd */
+@media (min-width: 700px){
+    .visible.on.xs{
+        display: none;
+    }
+}
+
+@media (max-width: 700px){
+    .visible.having.sm{
+        display: none;
+    }
+}
+
+@media (max-width: 700px){
+    .visible.on.sm{
+        display: none;
+    }
+}
+
+@media (min-width: 1050px){
+    .visible.on.sm{
+        display: none;
+    }
+}
+
+@media (max-width: 1050px){
+    .visible.on.md{
+        display: none;
+    }
+}
+
+@media (max-width: 1050px){
+    .visible.having.md{
+        display: none;
+    }
+}
+
+@media (min-width: 1050px){
+    .visible.no.md{
+        display: none;
+    }
+}
+
+@media (min-width: 1400px){
+    .visible.on.md{
+        display: none;
+    }
+}
+
+@media (max-width: 1400px){
+    .visible.on.lg{
+        display: none;
+    }
+}
+
+@media (min-width: 1400px){
+    .visible.no.lg{
+        display: none;
+    }
+}
+
+/* body */
+body {
+    background-color: #6d695c;
+    background-image:
+    repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+    linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+    background-size: 70px 120px;
+}
+/* font */
+h1,h2,h3,h4,h5,h6,p,div,input{
+    font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif !important;
+}
+
+/* some small fix */
+.us.ui.label{
+    margin-bottom: 10px;
+}

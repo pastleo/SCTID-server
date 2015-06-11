@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Student Card to Student ID System</title>
+
+        {% load static %}
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.css">
+        <link rel="stylesheet" href="{% static "site.css" %}">
+    </head>
+    <body>
+        <div id="bg" class="background frame">
+            <div class="bg-top"></div>
+        </div>
+        <div id="filter" class="filter frame"></div>
+        <div class="frame curtain">
+            <div id="index" class="masthead index stripe">
+                <h1 class="ui center aligned massive header">
+                     SCTID
+                    <div class="sub header">Student Card to Student ID System | 學生證-學號 對應系統</div>
+                </h1>
+            </div>
+            <div id="main" class="masthead main viewport-height stripe">
+                <div class="ui centered page stackable grid"> <!-- Login  -->
+                    <div id="login" class="ten wide column">
+                        <h5 class="ui top attached header">
+                            Login 登入
+                            <a href="{% url 'admin:index' %}" class="ui right aligned image red label">
+                                <i class="configure icon"></i>
+                                管理介面
+                            </a>
+                        </h5>
+                        <div class="ui fluid blue attached form segment">
+                            <form action="{% url 'login' %}" method="POST">
+                                <div class="ui positive hidable hidden message">
+                                </div>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <label>Username</label>
+                                        <input name="username" placeholder="Username" type="text">
+                                    </div>
+                                    <div class="field">
+                                        <label>Passowrd</label>
+                                        <input name="password" placeholder="Passowrd" type="password">
+                                    </div>
+                                </div>
+                                <hr>
+                                <input class="ui green submit button" type="submit" value="login">
+                                <a id="logout" href="{% url 'logout' %}" class="ui red submit button">logout</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui centered page stackable grid"> <!-- Register  -->
+                    <div id="register" class="ten wide column">
+                        <h5 class="ui top attached header">
+                            Register 註冊卡片與學號
+                        </h5>
+                        <div class="ui fluid yellow attached form segment">
+                            <form action="{% url 'register' %}" method="POST">
+                                <div class="ui positive hidable hidden message">
+                                </div>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <label>Student Card ID</label>
+                                        <input name="card_id" placeholder="Student Card ID" type="text">
+                                    </div>
+                                    <div class="field">
+                                        <label>Student ID</label>
+                                        <input name="student_id" placeholder="Student ID" type="text">
+                                    </div>
+                                </div>
+                                <hr>
+                                <input class="ui yellow submit button" type="submit" value="register">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui centered page stackable grid"> <!-- Get Student ID  -->
+                    <div id="get" class="ten wide column">
+                        <h5 class="ui top attached header">
+                            Get Student ID 對應
+                        </h5>
+                        <div class="ui fluid green attached form segment">
+                            <form action="{% url 'get' %}" method="POST">
+                                <div class="ui positive hidable hidden message">
+                                </div>
+                                <div class="two fields">
+                                    <div class="field">
+                                        <label>Student Card ID</label>
+                                        <input name="card_id" placeholder="Student Card ID" type="text">
+                                    </div>
+                                </div>
+                                <hr>
+                                <input class="ui green submit button" type="submit" value="get">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer" class="masthead footer stripe">
+                <div class="ui page one column grid">
+                    <div id="sponsers" class="centerAligned column">
+                        
+                        <a target="_blank" href="http://nchusg.org/" class="ui us image blue label">
+                        <img src="http://i.imgur.com/zF2JgJ7s.jpg">
+                        國立中興大學學生會
+                        <!-- <div class="detail">主管</div> -->
+                        </a>
+                        <a href="mailto:nchusg20@gmail.com" class="ui us image yellow label">
+                        <i class="mail icon"></i>
+                        nchusg20@gmail.com
+                        <div class="detail">使用 Email 聯絡我們</div>
+                        </a>
+                        <a href="http://pastleo.me" class="ui us image green label">
+                        <i class="code icon"></i>
+                        PastLeo
+                        <div class="detail">Programmer</div>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.2.0/semantic.min.js"></script>
+        <script src='{% static "site.js" %}'></script>
+        <!-- google analytics -->
+        <script>
+        </script>
+    </body>
+</html>
